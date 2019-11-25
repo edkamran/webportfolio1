@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>Javascript add item</title>
+
+    <script>
+
+      function addItem() {
+        var newItem = document.createElement("div");
+        newItem.innerHTML = document.getElementById("box").value;
+        newItem.onclick= removeItem;
+        document.getElementById("list").appendChild(newItem);
+      }
+
+      function removeItem() {
+        document.getElementById("list").removeChild(this);
+     }
+
+    </script>
+    <style>
+      body {
+        background-color: beige;
+      }
+
+      .pfor {
+         width: 360px;
+         height: 236px;
+         border: 2px solid black;
+       }
+
+      button:hover {
+        background-color: lightblue;
+        color: black;
+        cursor: pointer;
+      }
+
+      input:enabled {
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <header style="text-align: center;"><h1>ADD ITEM</h1></header><hr>
+
+        <input type="text" id="box" value="Type here to add"/>
+        <button type="button" onclick="addItem();">Add Item</button>
+        <div class="pfor">
+        <p id="list"></p>
+        </div>
+
+    </script>
+
+  </body>
+</html>

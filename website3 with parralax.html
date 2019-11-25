@@ -1,0 +1,153 @@
+<html>
+    <head>
+        <title>website example</title>
+    </head>
+
+    <style>
+      * {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway';
+}
+
+body {
+  background: black;
+  scroll-behavior: smooth;
+}
+
+.parallax {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("photo3.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  color: white;
+  font-size: 8em;
+}
+
+h1 span {
+  background: linear-gradient(rgba(0, 0, 0, 0) 65%, rgba(255, 255, 255, 0.3) 35%)
+}
+
+.screen {
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, black 95%);
+}
+
+.flex {
+  width: 90%;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.item {
+  height: 300px;
+  margin: 10px 0;
+  width: 30%;
+  color: white;
+  font-size: 1em;
+}
+
+.double {
+  width: 65%;
+  background-image: url("photo2.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.double-2 {
+  background-image: url("photo1.jpg");
+
+p {
+  text-align: justify;
+}
+
+#more {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-image: url("photo3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.second-screen {
+  background: rgba(0, 0, 0, 0.77);
+}
+
+.second-screen p {
+  color: white;
+  width: 80%;
+  margin: 7% auto;
+  font-size: 20px;
+  line-height: 170%;
+}
+
+a {
+    color: white;
+}
+
+.screen a {
+  font-size: 16px;
+  background-color: greenyellow;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 15px 0;
+}
+    </style>
+
+    <body>
+            <div class="parallax">
+                    <h1><span>Hello<br /> Nature</span></h1>
+                  </div>
+                  <div class="screen"></div>
+                  <div class="flex" id="index">
+                    <div class="item">
+                          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.<br/>
+                           <h3 class="link"><a href="#more">More</a></h3> </p>
+                    </div>
+                    <div class="item">
+                          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                    </div>
+                    <div class="item">
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                    </div>
+                    <div class="item double double-2"></div>
+                    <div class="item">
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                    </div>
+
+                    
+                    <div class="item">
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                    </div>
+                    <div class="item">
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                    </div>
+                    <div class="item">
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                    </div>
+                    <div class="item">
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                    </div>
+                    <div class="item double double-2"></div>
+                
+            </div>
+    </body>
+</html>

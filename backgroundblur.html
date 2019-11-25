@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>Blur</title>
+    <style>
+      body {
+         margin: 0;
+       }
+
+     div {
+         width: 100%;
+         height: 100%;
+       }
+
+      div .point1 {
+         background: url(loz.jpg);
+         background-position: center;
+         position: absolute;
+         transform: translate(-50%,-50%);
+         left: 50.4%;
+         top: 56%;
+         width: 440px;
+         height: 460px;
+         z-index: 1;
+      }
+
+      div .point2  {
+         background-image: url(loz.jpg);
+         position: absolute;
+         height: 100%;
+         background-attachment: local;
+         width: 96%;
+
+         background-position: fixed;
+         transition: 1s;
+       }
+
+       .point1:hover ~ .point2{
+          filter: hue-rotate(90deg);
+      }
+
+       .point1:hover {
+         box-shadow: 0 6px 6px 6px lightblue;
+       }
+    </style>
+
+  </head>
+  <body>
+    <div>
+      <div class="point1"></div>
+      <div class="point2"></div>
+    </div>
+
+
+
+  </body>
+</html>

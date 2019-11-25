@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Button within an image</title>
+  <style>
+  .container {
+    position: relative;
+    max-width: 440px;
+    width: 100%;
+  }
+
+  .container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .container .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f1f1f1;
+    color: black;
+    font-size: 22px;
+    border: none;
+    padding: 16px 28px;
+  }
+
+  .container .btn:hover {
+    background-color: black;
+    color: white;
+  }
+
+  .btn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  </style>
+</head>
+<body>
+
+  <div class="container">
+     <img src="siximage.jpg" alt="600x600image">
+     <button class="btn">Button</button>
+  </div>
+
+
+</body>
+</html>>

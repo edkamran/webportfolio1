@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>glowing button</title>
+    <link rel="stylesheet" href="glowbutton.css">
+    <style>
+      body {
+         background-color: black;
+         margin: 0;
+         padding: 0;
+      }
+
+
+     #button {
+       background-color: grey;
+       display: inline-block;
+       border-radius: 50%;
+       margin-left: 22%;
+       margin-top: 24%;
+       height: 50px;
+       width: 50px;
+       transition: 0.5s;
+     }
+
+     #num {
+       color: black;
+       font-size: 40px;
+       font-style: sans-serif;
+       text-align: center;
+       padding: 3px;
+     }
+
+     #button:hover {
+       background-color: #fff;
+       box-shadow: 0 0 10px rgba(255, 255, 255, 1),
+                   0 0 20px rgba(255, 255, 255, 1),
+                   0 0 30px rgba(255, 255, 255, 1),
+                   0 0 0 75px rgba(255, 255, 255, 0.05),
+                   0 0 0 62px rgba(255, 255, 255, 0.05),
+                   0 0 0 46px rgba(255, 255, 255, 0.05),
+                   0 0 0 32px rgba(255, 255, 255, 0.05),
+                   0 0 0 16px rgba(255, 255, 255, 0.05);
+     }
+
+
+    </style>
+
+  </head>
+  <body>
+
+   <div id="button">
+     <div id="num">
+      <b>1</b>
+     </div>
+   </div>
+
+  <div id="button">
+     <div id="num">
+       <b>2</b>
+     </div>
+  </div>
+
+  <div id="button">
+     <div id="num">
+       <b>3</b>
+     </div>
+  </div>
+
+  </body>
+</html>

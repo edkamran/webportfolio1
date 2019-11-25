@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>New</title>
+   <meta name="viewport" content="width=device-width, intial-scale=1.0">
+   <style>
+
+	  body {
+	   margin-left: 2px;
+     margin-top: 2px;
+	   background-color: hsla(120, 100%, 76%, 0.3);
+	   font-size: 18px;
+	 }
+
+   div {
+     text-align: center;
+     width: 22%;
+     height: 44px;
+     background-color: lightblue;
+     transition: 2s;
+     transition: width 2s, height 2s, transform 2s;
+   }
+
+   #div1 {transition-timing-function: linear;
+          transition-delay: 2s;
+  }
+
+   #div2 {transition-timing-function: ease;}
+
+   #div3 {transition-timing-function: ease-in;}
+
+   #div4 {transition-timing-function: ease-out;}
+
+   #div5 {transition-timing-function: ease-in-out;}
+
+
+   div:hover {
+     width: 300px;
+     height: 300px;
+     transform: skewY(180deg);
+   }
+
+    </style>
+</head>
+<body>
+
+<div id="div1">linear</div><br/>
+<div id="div2">Ease</div><br/>
+<div id="div3">Ease-in</div><br/>
+<div id="div4">Ease-out</div><br/>
+<div id="div5">Ease-in-out</div>
+
+<hr>
+<br/>
+<br/>
+<br/>
+<br/>
+
+   <iframe height="200px" width="66%" src="https://www.bing.com/" name="example1" >
+	 </iframe>
+       <a href="https://www.bing.com/" target="example1">Click here</a>
+
+	</footer>
+
+</body>
+</html>

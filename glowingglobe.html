@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Glowing globe</title>
+  <style>
+    body {
+       margin: 0;
+       padding: 0;
+       display: inline;
+  }
+
+   #main {
+       margin-left: 50%;
+       margin-top: 26%;
+       border-radius: 50%;
+       position: relative;
+       width: 100px;
+       height: 100px;
+       background: linear-gradient(#0068C7, #0988C7, #1AA6C7);
+       animation: animate 1s linear infinite;
+      }
+
+    #main #inside {
+       position: absolute;
+       height: 70px;
+       width: 70px;
+       float: center;
+      }
+
+    #main #inside {
+       content: "";
+       margin: 15px;
+       position: absolute;
+       background: white;
+       border-radius: 50%;
+       color: white;
+      }
+
+    @keyframes animate {
+       0% { transform: rotate(0deg); }
+       100% { transform: rotate(360deg); }
+      }
+
+  </style>
+  </head>
+  <body>
+      <div id="main">
+         <div id="inside">
+         </div>
+       </div>
+
+  </body>
+  </html>

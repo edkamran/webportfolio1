@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Final clock attempt</title>
+    <style>
+       body {
+         background-color: #aaa;
+         margin-left: 4em;
+         margin-top: 4em;
+       }
+
+       canvas {
+         border-radius: 10px;
+         background-color: beige;
+       }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="600" height="600"></canvas>
+    <script>
+       var canvas = document.getElementById("myCanvas");
+       var clo = canvas.getContext("2d");
+
+       var radius = canvas.height/2;
+       clo.translate(radius, radius);
+       radius = radius*0.9;
+       window.setInterval(startClock, 1000);
+
+       function startClock() {
+         drawFace(clo, radius);
+         drawNum(clo, radius);
+         drawTime(clo, radius);
+       }
+b
+      function drawFace(clo, radius) {
+         clo.beginPath();
+         clo.arc(0, 0, radius, 0, 2 * Math.PI);
+         clo.fillStyle = "#000000";
+         clo.fill();
+         clo.closePath();
+
+         clo.lineWidth = radius* 0.03;
+         clo.strokeStyle= "black";
+         clo.stroke();
+         clo.beginPath();
+         clo.arc(0, 0, radius*0.1, 0, 2 * Math.PI);
+         clo.fillStyle = "#fff";
+         clo.fill();
+       }
+
+       function drawNum(clo, radius) {
+         var ang; /* >>>> */ var num;
+         clo.font = radius*0.15 + "px sans-serif";
+         clo.textBaseLine = "middle";
+         clo.textAlign ="center";
+         for (num = 1; num < 13; num++) {
+           ang = num * Math.PI/6;
+           clo.rotate(ang);
+           clo.translate(0, -radius * 0.85);
+           clo.rotate(-ang);
+           clo.fillText(num.toString(), 0, 0);
+           clo.rotate(ang);
+           clo.translate(0, radius*0.85);
+           clo.rotate(-ang);
+         }
+      }
+
+      function drawHand(clo, pos, length, width, color) {
+        clo.beginPath();
+        clo.lineCap = "round";
+        clo.strokeStyle = color;
+        clo.moveTo(0,0);
+        clo.rotate(pos);
+        clo.lineTo(0, -length);
+        clo.stroke();
+        clo.rotate(-pos);
+      }
+
+      function drawTime(ctx, radius){
+          var now = new Date();
+          var hour = now.getHours();
+          var minute = now.getMinutes();
+          var second = now.getSeconds();
+
+          hour = hour % 12;
+          hour= (hour*Math.PI/6) + (minute*Math.PI/(6*60))+ (second*Math.PI/(360*60));
+          drawHand(ctx, hour, radius*0.52, radius*0.09, 'white');
+          //minute
+          minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+          drawHand(ctx, minute, radius*0.8, radius*0.07, 'lightblue');
+          // second
+          second=(second*Math.PI/30);
+          drawHand(ctx, second, radius*0.8, radius*0.03, "red");
+         }
+    </script>
+
+
+  </body>
+</html>

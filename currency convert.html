@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+       body {
+          background-image: url("world.jpg");
+          background-size: cover;
+          padding: 0;
+          margin: 0;
+       }
+
+       header{
+          color: white;
+          font-weight: bold;
+          font-size: 36px;
+          text-align: center;
+          margin-top: 22px;
+       }
+
+       p {
+          color: white;
+          font-weight: bold;
+          font-size: 20px;
+          font-style: sans-serif;
+          text-align: center;
+          margin-left: 34%;
+          margin-top: 26px;
+          margin-bottom: 60px;
+          width: 600px;
+       }
+
+       .main {
+          color: white;
+          border: 1px solid black;
+          background-color: black;
+          font-style: Arial;
+          margin-left: 40%;;
+          padding: 6px;
+          position: relative;
+          height: 600px;
+          width: 320px;
+          margin-top: 36px;
+       }
+
+       input {
+          color: black;
+          background-color: white;
+          border: none;
+          border-radius: 3px;
+          font-size: 18px;
+          font-weight: bold;
+          height: 26px;
+          width: 320px;
+       }
+
+       ::placeholder {
+         color: #ccc;
+       }
+
+       input:hover {
+          color: black;
+          background-color: #4fb9f7;
+          border-radius: 3px;
+          border: none;
+          height: 26px;
+          width: 316px;
+        }
+
+
+        img {
+          bottom: 10px;
+          position: absolute;
+          height: 200px;
+          width: 230px;
+          margin-left: 40px;
+        }
+
+        .text1 {
+          font-size: 18px;
+          text-align: center;
+          background-color: #1d94d3;
+          border-radius: 3px;
+        }
+
+        .text2 {
+          font-size: 18px;
+          text-align: center;
+          background-color: #e02323;
+          border-radius: 3px;
+        }
+
+        .text3 {
+          font-size: 18px;
+          text-align: center;
+          background-color: #e02384;#21c421;
+          border-radius: 3px;
+        }
+
+        .text4 {
+          font-size: 18px;
+          text-align: center;
+          background-color: #21c421;
+          border-radius: 3px;
+        }
+
+    </style>
+
+  </head>
+  <body>
+      <header>
+        CURRENCY CONVERTER
+      </header>
+
+
+      <p>Welcome! This site will help you to convert British pound to USA dollar,
+      UAE dirham, euro and Russian ruble. Just enter the amount you want and then
+      it will automaticlly convert and show you the result</p>
+
+     <div class="main">
+        <input id="pouInput" class="nile1" type="number"
+        placeholder="£££ Enter amount here">
+
+        <div class="text1">
+           <h4>USA Dollar</h4>
+           <div id="dollar"></div>
+        </div>
+
+       <div class="text2">
+          <h4>Russian Ruble</h4>
+          <div id="ruble"></div>
+       </div>
+
+       <div class="text3">
+          <h4>UAE Dirham</h4>
+          <div id="dirham"></div>
+       </div>
+
+       <div class="text4">
+          <h4>Euro</h4>
+          <div id="euro"></div>
+       </div>
+
+        <img src="currency.png" alt="money">
+     </div>
+
+     <script>
+        document.getElementById("pouInput").addEventListener("input", function(f) {
+        let pow = f.target.value;
+        document.getElementById("dollar").innerHTML = pow * 1.30;
+        document.getElementById("ruble").innerHTML = pow * 85;
+        document.getElementById("dirham").innerHTML = pow * 4.80;
+        document.getElementById("euro").innerHTML = pow * 1.16;
+       });
+     </script>
+
+  </body>
+</html>

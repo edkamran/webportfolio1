@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>javascript1</title>
+       <style>
+          body {
+            margin: 0;
+            padding: 0;
+          }
+          canvas {
+              background-color: #aaa;
+              margin-left: 22px;
+           }
+       </style>
+
+  </head>
+  <body>
+       <canvas id="myCanvas" width="900" height="965" ></canvas>
+       <script>
+          var canvas = document.getElementById("myCanvas");
+          var can = canvas.getContext("2d");
+
+           var grad1 = can.createRadialGradient(200, 100, 100, 160, 200, 300);
+           grad1.addColorStop(0, "red");
+           grad1.addColorStop(0.3, "orange");
+           grad1.addColorStop(0.7, "yellow");
+           grad1.addColorStop(1, "black");
+           can.fillStyle = grad1;
+           can.fillRect(200, 100, 260, 360);
+           can.fill();
+
+           var x = 200;
+           var y = 500;
+           can.font = "bold 40px sans-serif";
+           can.fillStyle = "33675d";
+           can.fillText("Welcome", x, y);
+
+           for (var i=0; i < 3; i++) {
+              var x= Math.random() * innerWidth;
+              var y= Math.random() * innerHeight;
+              var grady= can.createLinearGradient(70, 120-300, 160-320, 400);
+              grady.addColorStop(0, "red");
+              grady.addColorStop(0.4, "yellow");
+              grady.addColorStop(0.8, "blue");
+              grady.addColorStop(1, "orange");
+
+              can.beginPath();
+              can.arc(x, y, 44, 0, 2 * Math.PI);
+              can.fill();
+              can.fillStyle= grady;
+              }
+
+/*When you perform a transformation, the entire context’s coordinate system is transformed.
+ After transforming, you often want the coordinate system to be back to normal for your next
+ step. Reversing the transformation by using another transformation is a dicey affair and can
+ easily introduce small errors that add up quickly. It’s easier to simply save the normal
+starting coordinate system as a saved drawing state and then after we do our transformation
+and wish to have a normal coordinate system as opposed to our newly transformed one, we simply
+restore the state we saved before transforming. Got it? LOL. Here’s some pictures to make it
+clearer. */
+
+              can.fillStyle = '#FA6900';
+              can.shadowOffsetX = 5;
+              can.shadowOffsetY = 5;
+              can.shadowBlur    = 4;
+              can.shadowColor   = 'rgba(204, 204, 204, 0.5)';
+              can.fillRect(0,0,15,150);
+              can.save();
+
+              can.fillStyle = '#E0E4CD';
+              can.shadowOffsetX = 10;
+              can.shadowOffsetY = 10;
+              can.shadowBlur   = 4;
+              can.shadowColor  = 'rgba(204, 204, 204, 0.5)';
+              can.fillRect(30,0,30,150);
+              can.save();
+
+              can.fillStyle = '#A7DBD7';
+              can.shadowOffsetX = 15;
+              can.shadowOffsetY = 15;
+              can.shadowBlur   = 4;
+              can.shadowColor  = 'rgba(204, 204, 204, 0.5)';
+              can.fillRect(90,0,45,150);
+              can.save();
+
+              can.restore();
+              can.beginPath();
+              can.arc(185, 75, 22, 0, Math.PI*2, true);
+              can.closePath();
+              can.fill();
+
+              can.restore();
+              can.beginPath();
+              can.arc(260, 75, 15, 0, Math.PI*2, true);
+              can.closePath();
+              can.fill();
+
+              can.restore();
+              can.beginPath();
+              can.arc(305, 75, 8, 0, Math.PI*2, true);
+
+              can.closePath();
+              can.fill();
+
+
+              
+       </script>
+
+  </body>
+</html>
